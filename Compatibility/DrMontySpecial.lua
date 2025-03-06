@@ -6,6 +6,7 @@ G.MULTIPLAYER.DECK.BANNED_CARDS_DRMONTY = { -- banned cards for the dr monty spe
     { id = "j_chicot" }, -- alredy banned
 
     { id = "j_blueprint" }, -- rares
+    { id = "j_brainstorm" },
     { id = "j_ancient" },
     { id = "j_baron" },
     { id = "j_baseball" },
@@ -29,6 +30,8 @@ G.MULTIPLAYER.DECK.BANNED_CARDS_DRMONTY = { -- banned cards for the dr monty spe
     { id = "j_onyx_agate" },
     { id = "j_selzer" },
     { id = "j_trading" },
+    { id = "j_mime "},
+    { id = "j_steel_joker" },
     { id = "j_mr_bones" }, -- alredy banned
     { id = "j_luchador" }, -- alredy banned
     { id = "j_matador" }, -- alredy banned
@@ -40,6 +43,7 @@ G.MULTIPLAYER.DECK.BANNED_CARDS_DRMONTY = { -- banned cards for the dr monty spe
     { id = "j_photograph" },
     { id = "j_hanging_chad" },
     { id = "j_mail" },
+    { id = "j_reserved_parking" },
     { id = "j_mp_defensive_joker" },
     { id = "j_mp_hanging_bad" },
 
