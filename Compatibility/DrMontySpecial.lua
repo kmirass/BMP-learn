@@ -59,3 +59,18 @@ G.MULTIPLAYER.DECK.BANNED_CARDS_DRMONTY = { -- banned cards for the dr monty spe
 	{ id = "v_directors_cut" }, -- alredy banned
 	{ id = "v_retcon" }, -- alredy banned
 }
+
+G.MULTIPLAYER.DECK.BANNED_TAGS_DRMONTY = { -- banned tags for the dr monty special (weekly tournament 3)
+    { id = "tag_uncommon" } ,
+    { id = "tag_meteor" },
+    { id = "tag_garbage" },
+    { id = "tag_top_up" },
+    { id = "tag_handy" },
+}
+
+SMODS.Enhancement:take_ownership("glass", { -- change mult and chance of breaking of breaking glass
+	config = {
+		Xmult = 1,
+		extra = 1000000,
+	},
+}, true)

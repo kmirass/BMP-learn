@@ -10,7 +10,7 @@ SMODS.Challenge({
 	vouchers = {},
 	restrictions = {
 		banned_cards = G.MULTIPLAYER.DECK.BANNED_CARDS_DRMONTY,
-		banned_tags = G.MULTIPLAYER.DECK.BANNED_TAGS,
+		banned_tags = G.MULTIPLAYER.DECK.BANNED_TAGS_DRMONTY,
 		banned_other = G.MULTIPLAYER.DECK.BANNED_BLINDS,
 	},
 	deck = {
