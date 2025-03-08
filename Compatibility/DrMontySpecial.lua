@@ -66,6 +66,7 @@ G.MULTIPLAYER.DECK.BANNED_TAGS_DRMONTY = { -- banned tags for the dr monty speci
     { id = "tag_garbage" },
     { id = "tag_top_up" },
     { id = "tag_handy" },
+    { id = "tag_boss" }, -- alredy banned
 }
 
 SMODS.Enhancement:take_ownership("glass", { -- change mult and chance of breaking of breaking glass
