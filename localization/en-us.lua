@@ -104,6 +104,8 @@ return {
 		},
 		challenge_names = {
 			c_multiplayer_1 = "Multiplayer",
+			c_multiplayer_badlatro = "BADLATRO",
+			c_multiplayer_goodlatro = "GOODLATRO",
 		},
 		dictionary = {
 			singleplayer = "Singleplayer",
@@ -131,8 +133,10 @@ return {
 			draft_name = "Draft",
 			draft_desc = "Players play the Evolving Deck from the Balatro Draft mod, where they each gain a Draft Tag after every PvP Blind.",
 			draft_req = "Requires the Balatro Draft mod",
-			monty_special_name = "The Dr. Monty Special",
+			monty_special_name = "Badlatro",
 			monty_special_desc = "A special gamemode designed by @dr_monty_the_snek on the discord server. I guess you'll have to find out what it is!",
+			jake_special_name = "Goodlatro",
+			jake_special_desc = "A special gamemode designed by @jqkeup0931 on the discord server. I guess you'll have to find out what it is!",
 			precision_name = "Precision",
 			precision_desc = "The same as Attrition, except the person closest to the target score wins PvP blinds (instead of the person with the highest score).",
 			royale_name = "Battle Royale",
