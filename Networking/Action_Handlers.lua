@@ -404,6 +404,24 @@ local game_update_ref = Game.update
 function Game:update(dt)
 	game_update_ref(self, dt)
 
+
+	-- i dont know where the heck put this to work but here it works
+	if G.GAME.modifiers["ban_glass"] then 
+        SMODS.Enhancement:take_ownership("glass", { 
+            config = { 
+                Xmult = 1,
+                extra = 1000000,
+            },
+        }, true)
+    else
+        SMODS.Enhancement:take_ownership("glass", { 
+            config = { 
+                Xmult = 2,
+                extra = 4,
+            },
+        }, true)
+    end
+
 	repeat
 		local msg = love.thread.getChannel("networkToUi"):pop()
 		if msg then
