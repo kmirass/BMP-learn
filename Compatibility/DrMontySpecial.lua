@@ -1,21 +1,27 @@
 G.MULTIPLAYER.DECK.BANNED_CARDS_DRMONTY = { -- banned cards for the dr monty special (weekly tournament 3)
-    { id = "j_caino" }, -- legendaries
+    { id = "j_chicot" }, -- alredy banned
+	{ id = "j_mr_bones" }, -- alredy banned
+	{ id = "j_luchador" }, -- alredy banned
+	{ id = "j_matador" }, -- alredy banned
+	{ id = "v_hieroglyph" }, -- alredy banned
+	{ id = "v_petroglyph" }, -- alredy banned
+	{ id = "v_directors_cut" }, -- alredy banned
+	{ id = "v_retcon" }, -- alredy banned
+
+    { id = "j_caino" }, 
     { id = "j_perkeo" },
     { id = "j_triboulet" },
     { id = "j_yorick" },
-    { id = "j_chicot" }, -- alredy banned
-
-    { id = "j_blueprint" }, -- rares
+    { id = "j_blueprint" },
     { id = "j_brainstorm" },
     { id = "j_ancient" },
     { id = "j_baron" },
     { id = "j_baseball" },
     { id = "j_dna" },
-    { id = "j_family" };
+    { id = "j_family" },
     { id = "j_trio" },
     { id = "j_vagabond" },
-
-    { id = "j_acrobat" }, -- uncommons
+    { id = "j_acrobat" }, 
     { id = "j_card_sharp" },
     { id = "j_cartomancer" },
     { id = "j_certificate" },
@@ -30,14 +36,9 @@ G.MULTIPLAYER.DECK.BANNED_CARDS_DRMONTY = { -- banned cards for the dr monty spe
     { id = "j_onyx_agate" },
     { id = "j_selzer" },
     { id = "j_trading" },
-    { id = "j_mime"},
+    { id = "j_mime" },
     { id = "j_steel_joker" },
-    { id = "j_mr_bones" }, -- alredy banned
-    { id = "j_luchador" }, -- alredy banned
-    { id = "j_matador" }, -- alredy banned
-
-
-    { id = "j_abstract" }, -- commons
+    { id = "j_abstract" }, 
     { id = "j_blue_joker" },
     { id = "j_cavendish" },
     { id = "j_photograph" },
@@ -46,32 +47,21 @@ G.MULTIPLAYER.DECK.BANNED_CARDS_DRMONTY = { -- banned cards for the dr monty spe
     { id = "j_reserved_parking" },
     { id = "j_mp_defensive_joker" },
     { id = "j_mp_hanging_bad" },
-
-    { id = "c_trance" }, -- spectrals
+    { id = "c_trance" },
     { id = "c_deja_vu" },
-
-    { id = "c_justice" }, -- tarots
-
-    { id = "v_magic_trick" }, -- vouchers
+    { id = "c_justice" },
+    { id = "v_magic_trick" },
     { id = "v_illusion" },
-    { id = "v_hieroglyph" }, -- alredy banned
-	{ id = "v_petroglyph" }, -- alredy banned
-	{ id = "v_directors_cut" }, -- alredy banned
-	{ id = "v_retcon" }, -- alredy banned
 }
 
 G.MULTIPLAYER.DECK.BANNED_TAGS_DRMONTY = { -- banned tags for the dr monty special (weekly tournament 3)
+    { id = "tag_boss" }, -- alredy banned
+
     { id = "tag_uncommon" } ,
     { id = "tag_meteor" },
     { id = "tag_garbage" },
     { id = "tag_top_up" },
-    { id = "tag_handy" },
-    { id = "tag_boss" }, -- alredy banned
+    { id = "tag_handy" },   
 }
 
-SMODS.Enhancement:take_ownership("glass", { -- change mult and chance of breaking of breaking glass
-	config = {
-		Xmult = 1,
-		extra = 1000000,
-	},
-}, true)
+G.MULTIPLAYER.DECK.BANNED_BLINDS_DRMONTY = {}
