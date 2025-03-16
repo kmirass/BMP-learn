@@ -168,8 +168,7 @@ function G.UIDEF.create_UIBox_create_lobby_button()
 							colour = G.C.BOOSTER,
 							tabs = {
 								{
-									label = G.localization.misc.dictionary["monty_special_name"] or "The Dr. Monty Special",
-									chosen = true,
+									label = G.localization.misc.dictionary["attrition_name"] or "Attrition",
 									tab_definition_function = function()
 										return {
 											n = G.UIT.ROOT,
@@ -217,8 +216,201 @@ function G.UIDEF.create_UIBox_create_lobby_button()
 															n = G.UIT.T,
 															config = {
 																text = G.MULTIPLAYER.UTILS.wrapText(
+																	G.localization.misc.dictionary["attrition_desc"]
+																		or "Every boss round is a competition between players where the player with the lower score loses a life.",
+																	50
+																),
+																shadow = true,
+																scale = var_495_0 * 0.6,
+																colour = G.C.UI.TEXT_LIGHT,
+															},
+														},
+													},
+												},
+											},
+										}
+									end,
+								},
+								{
+									label = G.localization.misc.dictionary["showdown_name"] or "Showdown",
+									tab_definition_function = function()
+										return {
+											n = G.UIT.ROOT,
+											config = {
+												emboss = 0.05,
+												minh = 6,
+												r = 0.1,
+												minw = 10,
+												align = "tm",
+												padding = 0.2,
+												colour = G.C.BLACK,
+											},
+											nodes = {
+												{
+													n = G.UIT.R,
+													config = {
+														align = "tm",
+														padding = 0.05,
+														w = 8,
+														h = 2,
+													},
+													nodes = {
+														UIBox_button({
+															id = "start_showdown",
+															label = {
+																G.localization.misc.dictionary["start_lobby"]
+																	or "Start Lobby",
+															},
+															colour = G.C.RED,
+															button = "start_lobby",
+															minw = 5,
+														}),
+													},
+												},
+												{
+													n = G.UIT.R,
+													config = {
+														align = "tm",
+														padding = 0.05,
+														minw = 8,
+														minh = 4,
+													},
+													nodes = {
+														{
+															n = G.UIT.T,
+															config = {
+																text = G.MULTIPLAYER.UTILS.wrapText(
+																	G.localization.misc.dictionary["showdown_desc"]
+																		or "Both players play 3 normal antes, then they play an ante where every round the player with the higher scorer wins.",
+																	50
+																),
+																shadow = true,
+																scale = var_495_0 * 0.6,
+																colour = G.C.UI.TEXT_LIGHT,
+															},
+														},
+													},
+												},
+											},
+										}
+									end,
+								},
+								{
+									label = G.localization.misc.dictionary["monty_special_name"] or "BADLATRO",
+									chosen = true,
+									tab_definition_function = function()
+										return {
+											n = G.UIT.ROOT,
+											config = {
+												emboss = 0.05,
+												minh = 6,
+												r = 0.1,
+												minw = 10,
+												align = "tm",
+												padding = 0.2,
+												colour = G.C.BLACK,
+											},
+											nodes = {
+												{
+													n = G.UIT.R,
+													config = {
+														align = "tm",
+														padding = 0.05,
+														w = 8,
+														h = 2,
+													},
+													nodes = {
+														UIBox_button({
+															id = "start_badlatro",
+															label = {
+																G.localization.misc.dictionary["start_lobby"]
+																	or "Start Lobby",
+															},
+															colour = G.C.RED,
+															button = "start_lobby",
+															minw = 5,
+														}),
+													},
+												},
+												{
+													n = G.UIT.R,
+													config = {
+														align = "tm",
+														padding = 0.05,
+														minw = 8,
+														minh = 4,
+													},
+													nodes = {
+														{
+															n = G.UIT.T,
+															config = {
+																text = G.MULTIPLAYER.UTILS.wrapText(
 																	G.localization.misc.dictionary["monty_special_desc"]
 																		or "A special gamemode designed by @dr_monty_the_snek on the discord server. I guess you'll have to find out what it is!",
+																	50
+																),
+																shadow = true,
+																scale = var_495_0 * 0.6,
+																colour = G.C.UI.TEXT_LIGHT,
+															},
+														},
+													},
+												},
+											},
+										}
+									end,
+								},
+								{
+									label = G.localization.misc.dictionary["jake_special_name"] or "GOODLATRO",
+									tab_definition_function = function()
+										return {
+											n = G.UIT.ROOT,
+											config = {
+												emboss = 0.05,
+												minh = 6,
+												r = 0.1,
+												minw = 10,
+												align = "tm",
+												padding = 0.2,
+												colour = G.C.BLACK,
+											},
+											nodes = {
+												{
+													n = G.UIT.R,
+													config = {
+														align = "tm",
+														padding = 0.05,
+														w = 8,
+														h = 2,
+													},
+													nodes = {
+														UIBox_button({
+															id = "start_goodlatro",
+															label = {
+																G.localization.misc.dictionary["start_lobby"]
+																	or "Start Lobby",
+															},
+															colour = G.C.RED,
+															button = "start_lobby",
+															minw = 5,
+														}),
+													},
+												},
+												{
+													n = G.UIT.R,
+													config = {
+														align = "tm",
+														padding = 0.05,
+														minw = 8,
+														minh = 4,
+													},
+													nodes = {
+														{
+															n = G.UIT.T,
+															config = {
+																text = G.MULTIPLAYER.UTILS.wrapText(
+																	G.localization.misc.dictionary["jake_special_desc"]
+																		or "A special gamemode designed by @jqkeup0931 on the discord server. I guess you'll have to find out what it is!",
 																	50
 																),
 																shadow = true,
@@ -355,7 +547,12 @@ end
 
 function G.FUNCS.start_lobby(e)
 	G.SETTINGS.paused = false
-	G.MULTIPLAYER.create_lobby(e.config.id == "start_attrition" and "attrition" or "showdown")
+	G.MULTIPLAYER.create_lobby(
+		e.config.id == "start_badlatro" and "badlatro" 
+		or e.config.id == "start_goodlatro" and "goodlatro"
+		or e.config.id == "start_attrition" and "attrition"
+		or e.config.id == "start_showdown" and "showdown"
+	)
 end
 
 -- Modify play button to take you to mode select first

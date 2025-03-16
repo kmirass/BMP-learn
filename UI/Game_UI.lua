@@ -1698,8 +1698,11 @@ local reset_blinds_ref = reset_blinds
 function reset_blinds()
 	reset_blinds_ref()
 	if G.LOBBY.code then
-		if G.LOBBY.config.gamemode == "attrition" and G.GAME.round_resets.ante > 1 then
-			G.GAME.round_resets.blind_choices.Boss = "bl_pvp"
+		if (G.LOBBY.config.gamemode == "attrition" 
+		or G.LOBBY.config.gamemode == "badlatro" 
+		or G.LOBBY.config.gamemode == "goodlatro") 
+		and G.GAME.round_resets.ante > 1 then
+		G.GAME.round_resets.blind_choices.Boss = "bl_pvp"
 		end
 		if
 			G.LOBBY.config.gamemode == "showdown"
@@ -1967,7 +1970,14 @@ function G.FUNCS.select_blind(e)
 end
 
 function G.UIDEF.multiplayer_deck()
-	return G.UIDEF.challenge_description(get_challenge_int_from_id("c_multiplayer_1"), nil, false)
+	if G.LOBBY.config.gamemode == "badlatro" then
+		return G.UIDEF.challenge_description(get_challenge_int_from_id("c_multiplayer_badlatro"), nil, false)
+	elseif G.LOBBY.config.gamemode == "goodlatro" then
+		return G.UIDEF.challenge_description(get_challenge_int_from_id("c_multiplayer_goodlatro"), nil, false)
+	else
+		return G.UIDEF.challenge_description(get_challenge_int_from_id("c_multiplayer_1"), nil, false)
+
+	end
 end
 
 local skip_blind_ref = G.FUNCS.skip_blind
