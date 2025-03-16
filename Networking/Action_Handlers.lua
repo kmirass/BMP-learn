@@ -406,7 +406,7 @@ function Game:update(dt)
 
 
 	-- i dont know where the heck put this to work but here it works
-	if G.GAME.modifiers["ban_glass"] then 
+	if G.GAME.modifiers["ban_glass"] or G.LOBBY.config.gamemode == "badlatro" then
         SMODS.Enhancement:take_ownership("glass", { 
             config = { 
                 Xmult = 1,
