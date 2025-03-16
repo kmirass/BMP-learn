@@ -59,6 +59,7 @@ load_mp_file("Compatibility/JokerDisplay.lua")
 load_mp_file("Compatibility/Distro.lua")
 load_mp_file("Compatibility/StrangePencil.lua")
 load_mp_file("Compatibility/DrMontySpecial.lua")
+load_mp_file("Compatibility/JakeSpecial.lua")
 
 load_mp_file("Lobby.lua")
 load_mp_file("Networking/Action_Handlers.lua")
