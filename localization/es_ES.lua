@@ -265,6 +265,8 @@ return {
             k_the_order_credit = "*Crédito a @MathIsFun_",
             k_the_order_integration_desc = "Esto parcheará la aparición de cartas para que no sea basada en las apuestas iniciales y use un solo grupo para cada tipo/rareza",
 			k_requires_restart = "*Requiere reiniciar para que tome efecto",
+            k_bans = "Prohibiciones",
+			k_reworks = "Añadidos/Modificaciones",
             ml_enemy_loc = { "Ubicación del", "enemigo" },
 			ml_mp_kofi_message = {
 				"Este mod y servidor es",
